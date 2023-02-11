@@ -19,7 +19,7 @@
   },
   "packageManager": "yarn@1.22.19",
   "scripts": {
-    "generate": "json-schema-to-zod -s schema.json -t index.ts -n Resume",
+    "generate": "npx json-schema-to-zod -s schema.json -t lib/schema.ts",
     "clean": "rimraf dist",
     "build": "yarn clean && yarn generate && tsc",
     "format": "rome format --write .",
@@ -30,7 +30,6 @@
     "zod": "^3.20.6"
   },
   "devDependencies": {
-    "json-schema-to-zod": "^0.6.2",
     "rimraf": "^4.1.2",
     "rome": "^11.0.0",
     "tsc": "^2.0.4",

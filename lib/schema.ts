@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const Resume = z
+export const schema = z
   .object({
     $schema: z
       .string()

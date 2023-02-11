@@ -1,10 +1,10 @@
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
 	test: {
-		reporters: ['verbose'],
+		reporters: ["verbose"],
 		typecheck: {
-			checker: 'tsc'
-		}
-	}
+			checker: "tsc",
+		},
+	},
 });
