@@ -1,0 +1,38 @@
+{
+  "name": "resume-schema-zod",
+  "type": "module",
+  "description": "Zod Schema for JSON Resume",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": {
+    "name": "Niko Heikkilä",
+    "email": "yo@nikoheikkila.fi"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "packageManager": "yarn@3.3.0",
+  "scripts": {
+    "generate": "json-schema-to-zod -s schema.json -t index.ts -n Resume",
+	"clean": "rimraf dist",
+    "build": "yarn clean && yarn generate && tsc",
+    "format": "rome format --write .",
+    "test": "vitest run --config ./vitest.config.ts",
+    "test:watch": "vitest watch ."
+  },
+  "dependencies": {
+    "zod": "^3.20.6"
+  },
+  "devDependencies": {
+    "json-schema-to-zod": "^0.6.2",
+    "rimraf": "^4.1.2",
+    "rome": "^11.0.0",
+    "tsc": "^2.0.4",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.1",
+    "vitest": "^0.28.4"
+  }
+}
