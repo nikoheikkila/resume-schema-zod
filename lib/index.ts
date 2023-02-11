@@ -1,7 +1,7 @@
 import * as z from "zod";
 import { schema } from "./schema";
 
-type Resume = z.infer<typeof schema>;
+export type Resume = z.infer<typeof schema>;
 
 export const parseFromString = (str: string): Resume => {
 	const result = schema.safeParse(toJSON(str));
