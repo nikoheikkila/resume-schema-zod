@@ -6,6 +6,9 @@
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+	"dist"
+  ],
   "author": {
     "name": "Niko Heikkilä",
     "email": "yo@nikoheikkila.fi"
@@ -14,10 +17,10 @@
     "type": "git",
     "url": ""
   },
-  "packageManager": "yarn@3.3.0",
+  "packageManager": "yarn@1.22.19",
   "scripts": {
     "generate": "json-schema-to-zod -s schema.json -t index.ts -n Resume",
-	"clean": "rimraf dist",
+    "clean": "rimraf dist",
     "build": "yarn clean && yarn generate && tsc",
     "format": "rome format --write .",
     "test": "vitest run --config ./vitest.config.ts",
